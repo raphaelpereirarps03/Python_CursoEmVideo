@@ -1,0 +1,5 @@
+print("Escreva um programa que leia o nome de uma cidade e diga se ela começa ou não com a palavra 'Santo' ")
+cidade = str(input("Entre com o nome da sua cidade: ")).strip()
+cidadeDividido = cidade.split()
+# print(cidadeDividido)
+print("santo" in cidadeDividido[0].lower())

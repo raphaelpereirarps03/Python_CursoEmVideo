@@ -1,0 +1,6 @@
+print("Faça um programa que leia o nome de uma pessoa e exiba seu primeiro e último nome separadamente")
+nomeCompleto = str(input("Entre com o seu nome completo: ")).strip()
+nomeDividido = nomeCompleto.split()
+print("Seu nome completo é {}".format(nomeCompleto))
+print("Seu primeiro nome é {}".format(nomeDividido[0]))
+print("Seu último nome é {}".format(nomeDividido[len(nomeDividido)-1]))
