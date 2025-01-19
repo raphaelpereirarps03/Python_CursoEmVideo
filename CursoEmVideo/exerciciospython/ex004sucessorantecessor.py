@@ -1,3 +1,5 @@
 print("Faça um programa que leia um número e exiba seu sucessor e antecessor.")
-numero = int(input("Entre com um número: "))
-print("O Antecessor é {} e o Sucessor é {}, de {}.".format((numero-1),(numero+1),numero))
+print("\033[36m-=-" * 20 + "\033[m")
+numero = int(input("\033[35mEntre com um número: "))
+print("\033[36m-=-" * 20 + "\033[m")
+print("O Antecessor de \033[32m{}\033[m é \033[33m{}\033[m e o Sucessor é \033[36m{}\033[m.".format(numero,(numero-1),(numero + 1)))

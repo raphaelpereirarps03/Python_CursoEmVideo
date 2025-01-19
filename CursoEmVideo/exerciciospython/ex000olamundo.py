@@ -1,1 +1,1 @@
-print("Olá, Python!")
+print("\033[34mOlá, Python!")
