@@ -1,6 +1,6 @@
 print("Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo ou não, desconsiderando espaços")
 
-fraseOriginal = str(input("Entre com uma frase qualquer: ")).strip().lower()
+fraseOriginal = str(input("Entre com uma frase qualquer: ")).strip()
 
 fraseMinuscula = fraseOriginal.lower()
 
