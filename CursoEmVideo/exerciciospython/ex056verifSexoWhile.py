@@ -2,7 +2,7 @@ print("Faça um programa que leia o sexo de uma pessoa, mas só aceite 'M' ou 'F
 
 sexo = ""
 while sexo != 'M' and sexo != 'F':
-    sexo = str(input("Digite seu sexo: [M/F] ")).upper()
+    sexo = str(input("Digite seu sexo: [M/F] ")).strip().upper()[0]
     if sexo != 'M' and sexo != 'F':
         print("Opção inválida, tente novamente. Lembrando [M - Masculino/F - Feminino]")
 

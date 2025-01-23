@@ -1,10 +1,10 @@
 print("Faça um programa que leia um número inteiro qualquer e mostre seu fatorial")
 
 numero = int(input("Entre com um número: "))
-sub = 1
-resultFatorial = numero * sub
-while sub < numero:
+sub = numero
+resultFatorial = 1
+print("Calculando {}! = ".format(numero), end='')
+while sub > 0:
+    print("{}".format(sub), end=' x ' if sub > 1 else " = {}".format(resultFatorial))
     resultFatorial *= sub
-    sub += 1
-
-print("{}! = {}".format(numero, resultFatorial))
+    sub -= 1
