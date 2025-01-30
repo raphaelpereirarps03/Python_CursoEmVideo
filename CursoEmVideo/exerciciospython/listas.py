@@ -51,13 +51,90 @@ valores = []
 # print("Cheguei ao final da lista")
 
 #Ao igualarmos uma lista, o python cria uma conexão entre elas, então por neste caso abaixo, invés da alterar, somente o índice 2 da lista B, o Python alterará tanto a lista A quanto a B, pq elas foram igualadas.
-a = [7, 8, 2, 6]
+# a = [7, 8, 2, 6]
 # b = a
 # b[2] = 4
 # print(f'Lista A: {a}')
 # print(f'Lista B: {b}')
 #Se eu quiser criar uma cópia de A em B realmente, sem ligá-las, eu precisamos fatiar a lista dessa forma. Dessa forma eu pego realmente apenas os valores, sem criar a ligação entre as listas
-b = a[:]
-b[2] = 4
-print(f'Lista A: {a}')
-print(f'Lista B: {b}')
+# b = a[:]
+# b[2] = 4
+# print(f'Lista A: {a}')
+# print(f'Lista B: {b}')
+
+"""
+LISTAS PT 2:
+
+Podemos colocar listas dentro de listas:
+dados = list()
+
+
+dados.append('Pedro')
+dados.append(25)
+dados.append('Maria')
+dados.append(44)
+dados.append('João')
+dados.append(13)
+dados.append('Julia')
+dados.append(18)
+print(dados[0]) = Pedro
+print(dados[1]) = 25
+print(dados[2]) = Maria
+print(dados[3]) = 44
+print(dados) = ['Pedro', 25, 'Maria',44 ,'João',13 ,'Julia', 18]
+
+pessoas = list()
+pessoas.append = (dados[:])
+print(pessoas) = ['Pedro', 25, 'Maria',44 ,'João',13 ,'Julia', 18]
+pessoas = [['Pedro',25], ['Maria',44], ['João',13], ['Julia',18]]
+print(pessoas[0]) = ['Pedro', 25]
+print(pessoas[-1]) = ['Julia', 18]
+print(pessoas[2]) = ['João', 13]
+
+print(pessoas[0][0]) =  Pedro - Pedindo para exibir o índice 0, da lista do índice 0 da lista de pessoas, ou seja o o nome 'Pedro'
+
+print(pessoas[1][1]) = Maria - Pedindo para exibir o índice 1, da lista do índice 1 da lista de pessoas, ou seja o 'Maria'
+
+print(pessoas[0][1]) = 25 - Pedindo para exibir o índice 1, da lista do índice 0 da lista de pessoas, ou seja o 25, a idade de Pedro
+
+print(pessoas[2][0]) = João - Pedindo para exibir o índice 0, da lista do índice 2 da lista de pessoas, ou seja o nome 'João'
+
+print(pessoas[3][1]) = 18 - Pedindo para exibir o índice 1, da lista do índice 3 da lista de pessoas, ou seja, 18, a idade de Julia
+"""
+
+# teste = list()
+# teste.append("Gustavo")
+# teste.append(40)
+# galera = list()
+# #galera.append(teste) ==== #Dessa forma, eu não estou criando uma cópia do que tem em teste e colocando na lista galera, eu estou criando uma ligação entre as duas lista, e se eu alterar uma, altero a outro também automaticamente. Para criar uma cópia, precisamos fazer da seguinte forma:
+# galera.append(teste[:]) # Aqui eu fiz o fatiamento da forma correta, copiei o dado que estava em teste, e coloquei na lista de galera. Ao alterar qualquer coisa de teste, não afetará a lista "Galera"
+# teste[0] = "Maria"
+# teste[1] = 22
+# galera.append(teste[:])
+# print(galera)
+#
+# galera = [['João', 19], ['Ana', 33], ['Joaquim', 13], ['Maria', 45]]
+# print(galera[0]) #Exibir todos os dados de João
+# print(galera[2][1]) #Exibir a idade de Joaquim
+# print(galera[3][0]) #Exibir o nome de Maria
+# print(galera[1]) #Exibir todos os dados de ana
+#
+# for pessoa in galera: #basicamente estou falando: "Para cada PESSOA em GALERA, exiba PESSOA", então para cada item da lista galera, ele irá exibir o item completo, então todas as informações da pessoa (Neste caso, nome e idade)
+#     print(pessoa)
+#
+# for pessoa in galera:
+#     print(pessoa[1]) #Diferente do exemplo anterior, aqui eu já especifíco o que eu vou querer de cada ítem, então, neste caso, estou pedindo que para cada pessoa de galera, me exiba o valor do índice 1 dela, no caso será a idade de todas as pessoas
+#
+# for pessoa in galera:
+#     print(f'{pessoa[0]} tem {pessoa[1]} anos de idade') #Podemos formatar também e exibir de forma mais bonita, organizada e clara
+
+galera = list()
+dado = list()
+for contador in range(0, 5):
+    dado.append(str(input("Nome: ")))
+    dado.append(int(input("Idade: ")))
+    galera.append(dado[:])
+    dado.clear()
+print(galera)
+
+#O programa acima criou duas lista, uma chamada 'galera', e outra chamada 'dado'. Ela vai ler o nome e idade de 1 pessoa, armazenar em 'dado', depois vai pegar esses valores de dado, e criar uma cópia em 'galera'. Depois disso, ele limpa o que foi digitado em dados, e vai repetir todo esse processo de novo. Fará 5 vezes isso, ou seja, 5 pessoas cadastradas com nome e idade
