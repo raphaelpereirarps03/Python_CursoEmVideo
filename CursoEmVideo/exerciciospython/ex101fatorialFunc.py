@@ -1,5 +1,4 @@
 import math
-
 print("Crie um programa que tenha uma função fatorial(), que receba dois parâmetros: O primeiro, que indicará o número a calcular e o outro chamado 'show', que será um valor lógico (opcional) indicando se será mostrado ou não o processo de cálculo de fatorial")
 
 
@@ -29,4 +28,3 @@ if resp == "S":
     fatorial(valor, True)
 else:
     fatorial(valor)
-

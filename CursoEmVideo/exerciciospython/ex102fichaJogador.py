@@ -10,7 +10,10 @@ print("-" * 30)
 nome = str(input("Nome do Jogador: ")).strip()
 qtdGols = (input("Total de gols: "))
 if nome and qtdGols:
-    ficha(nome, int(qtdGols))
+    if qtdGols.isnumeric() == False:
+        ficha(nomeJogador=nome)
+    else:
+        ficha(nome, int(qtdGols))
 elif nome:
     ficha(nomeJogador = nome)
 elif qtdGols:

@@ -24,6 +24,11 @@ while True:
 
     comando = str(input("Comando ou biblioteca > ")).lower()
     if comando == "fim":
+        titulo = "ATÉ LOGO!"
+        tamanho = len(titulo) + 4
+        print("\033[1;41m~" * (tamanho))
+        print(f"{titulo:^{tamanho}}")
+        print("~" * (tamanho))
         break
     else:
         interactiveHelpConsult(comando)
